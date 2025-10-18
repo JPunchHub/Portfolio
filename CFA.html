@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFA Portfolio - M&A & Investment Banking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #404b60;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3d5a9e 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><path d="M 50 350 L 100 300 L 150 320 L 200 250 L 250 280 L 300 200 L 350 220 L 400 150 L 450 180 L 500 120 L 550 140 L 600 80 L 650 100 L 700 50 L 750 70" stroke="rgba(52,211,153,0.5)" stroke-width="3" fill="none"/><circle cx="300" cy="200" r="4" fill="rgba(52,211,153,0.6)"/><circle cx="500" cy="120" r="4" fill="rgba(52,211,153,0.6)"/><text x="305" y="195" fill="rgba(52,211,153,0.5)" font-size="11" font-weight="600">+24%25</text><text x="505" y="115" fill="rgba(52,211,153,0.5)" font-size="11" font-weight="600">+18%25</text><path d="M 50 320 L 100 280 L 150 300 L 200 240 L 250 270 L 300 210 L 350 230 L 400 170 L 450 190 L 500 140 L 550 160 L 600 110 L 650 130 L 700 90 L 750 110" stroke="rgba(96,165,250,0.5)" stroke-width="2" fill="none"/></svg>'),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect x="20" y="180" width="30" height="100" fill="rgba(251,146,60,0.5)"/><rect x="70" y="150" width="30" height="130" fill="rgba(244,114,182,0.5)"/><rect x="120" y="120" width="30" height="160" fill="rgba(96,165,250,0.5)"/><rect x="170" y="140" width="30" height="140" fill="rgba(52,211,153,0.5)"/><rect x="220" y="100" width="30" height="180" fill="rgba(251,146,60,0.5)"/><rect x="270" y="130" width="30" height="150" fill="rgba(244,114,182,0.5)"/><rect x="320" y="90" width="30" height="190" fill="rgba(96,165,250,0.5)"/><text x="25" y="175" fill="rgba(251,146,60,0.5)" font-size="9" font-weight="600">42</text><text x="75" y="145" fill="rgba(244,114,182,0.5)" font-size="9" font-weight="600">58</text><text x="125" y="115" fill="rgba(96,165,250,0.5)" font-size="9" font-weight="600">73</text><text x="225" y="95" fill="rgba(251,146,60,0.5)" font-size="9" font-weight="600">89</text></svg>');
+            background-position: right center, left center;
+            background-repeat: no-repeat;
+            background-size: 50% auto, 30% auto;
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .credentials {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .credential-badge {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            border: 2px solid rgba(255,255,255,0.3);
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .credential-badge:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: none;
+            pointer-events: none;
+        }
+
+        .section:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transform: translateY(-3px);
+        }
+
+        h2 {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid #2a5298;
+            display: inline-block;
+            position: relative;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: -20px;
+            width: 400px;
+            height: 60px;
+            background-image: 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60"><path d="M 10 50 L 60 35 L 110 40 L 160 25 L 210 30 L 260 15 L 310 20 L 360 10" stroke="rgba(52,211,153,0.5)" stroke-width="2" fill="none"/><path d="M 10 45 L 60 32 L 110 37 L 160 23 L 210 28 L 260 18 L 310 23 L 360 15" stroke="rgba(96,165,250,0.5)" stroke-width="2" fill="none"/><circle cx="160" cy="25" r="2" fill="rgba(52,211,153,0.5)"/><circle cx="260" cy="15" r="2" fill="rgba(96,165,250,0.5)"/><text x="165" y="23" fill="rgba(52,211,153,0.5)" font-size="8" font-weight="600">+15%25</text><text x="265" y="13" fill="rgba(96,165,250,0.5)" font-size="8" font-weight="600">+22%25</text></svg>');
+            background-repeat: no-repeat;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .expertise-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #2a5298;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expertise-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 120px;
+            height: 80px;
+            background: none;
+            pointer-events: none;
+        }
+
+        .expertise-card:hover {
+            border-left-width: 8px;
+            transform: translateX(5px);
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+        }
+
+        .expertise-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-tag {
+            background: #2a5298;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            background: #1e3c72;
+            transform: scale(1.05);
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background-image: 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><path d="M 100 300 Q 200 250, 300 280 T 500 260 T 700 240" stroke="rgba(52,211,153,0.5)" stroke-width="2.5" fill="none"/><circle cx="300" cy="280" r="3" fill="rgba(52,211,153,0.6)"/><circle cx="500" cy="260" r="3" fill="rgba(52,211,153,0.6)"/><text x="305" y="275" fill="rgba(52,211,153,0.5)" font-size="10" font-weight="600">+32%25</text><text x="505" y="255" fill="rgba(52,211,153,0.5)" font-size="10" font-weight="600">+45%25</text><path d="M 100 250 Q 200 200, 300 230 T 500 210 T 700 190" stroke="rgba(96,165,250,0.5)" stroke-width="2.5" fill="none"/><circle cx="300" cy="230" r="3" fill="rgba(96,165,250,0.6)"/><text x="305" y="225" fill="rgba(96,165,250,0.5)" font-size="10" font-weight="600">$4.2M</text><circle cx="150" cy="100" r="60" fill="none" stroke="rgba(244,114,182,0.5)" stroke-width="1.5"/><circle cx="150" cy="100" r="80" fill="none" stroke="rgba(251,146,60,0.5)" stroke-width="1.5"/><text x="135" y="105" fill="rgba(244,114,182,0.5)" font-size="11" font-weight="600">85%25</text><circle cx="650" cy="120" r="50" fill="none" stroke="rgba(52,211,153,0.5)" stroke-width="1.5"/><circle cx="650" cy="120" r="70" fill="none" stroke="rgba(96,165,250,0.5)" stroke-width="1.5"/><text x="637" y="125" fill="rgba(52,211,153,0.5)" font-size="11" font-weight="600">92%25</text></svg>');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 1;
+            pointer-events: none;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border-bottom: 3px solid rgba(255,255,255,0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #1e3c72;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+            background: #f8f9fa;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #aaa;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Chartered Financial Analyst</h1>
+        <p>M&A Advisory | Investment Banking | Financial Modeling</p>
+        <div class="credentials">
+            <div class="credential-badge">CFA Level 2</div>
+            <div class="credential-badge">M&A Specialist</div>
+            <div class="credential-badge">Financial Modeling Expert</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>Professional Profile</h2>
+            <p style="font-size: 1.1rem; line-height: 1.8; color: #333; margin-top: 1.5rem;">
+                Seasoned finance professional with extensive experience in mergers and acquisitions, investment banking, and sophisticated financial modeling. CFA Level 2 accredited with a proven track record of delivering strategic insights and driving value creation for clients across multiple industries. Specialized in complex transaction structures, valuation analysis, and building comprehensive financial models that inform critical business decisions.
+            </p>
+        </section>
+
+        <section id="expertise" class="section">
+            <h2>Core Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h3>Mergers & Acquisitions</h3>
+                    <p>Comprehensive M&A advisory including deal origination, due diligence, valuation, negotiation, and transaction execution. Experience across buy-side and sell-side mandates.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>Investment Banking</h3>
+                    <p>Capital raising, strategic advisory, and structured finance solutions. Deep understanding of debt and equity markets with hands-on experience in deal structuring.</p>
+                </div>
+                <div class="expertise-card">
+                    <h3>Financial Modeling</h3>
+                    <p>Expert in building dynamic DCF models, LBO analyses, merger models, and scenario planning frameworks. Proficient in sensitivity analysis and complex valuation methodologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <span class="skill-tag">DCF Valuation</span>
+                <span class="skill-tag">LBO Modeling</span>
+                <span class="skill-tag">Merger Models</span>
+                <span class="skill-tag">Excel (Advanced)</span>
+                <span class="skill-tag">Financial Statement Analysis</span>
+                <span class="skill-tag">Due Diligence</span>
+                <span class="skill-tag">Pitch Book Creation</span>
+                <span class="skill-tag">Bloomberg Terminal</span>
+                <span class="skill-tag">FactSet</span>
+                <span class="skill-tag">Capital IQ</span>
+                <span class="skill-tag">Comparable Company Analysis</span>
+                <span class="skill-tag">Precedent Transactions</span>
+            </div>
+        </section>
+
+        <section id="contact" class="cta-section">
+            <h2>Let's Connect</h2>
+            <p style="font-size: 1.2rem; margin-top: 1rem; opacity: 0.95;">
+                Open to discussing M&A opportunities, consulting engagements, and strategic financial advisory roles.
+            </p>
+            <a href="#" class="cta-button">Get In Touch</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Chartered Financial Analyst Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
