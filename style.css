@@ -1,10 +1,6 @@
-/* ===========================
-   🎨 Global Base Styles
-=========================== */
-
-html {
-  scroll-behavior: smooth;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
   font-family: 'Inter', sans-serif;
@@ -12,139 +8,34 @@ body {
   color: #1f2937;
 }
 
-/* ===========================
-   🌈 Color Utilities
-=========================== */
-
-.text-navy {
-  color: #1e3a8a; /* Indigo-900 */
-}
-
-.bg-navy {
-  background-color: #1e3a8a;
-}
-
-.text-gradient {
-  background: linear-gradient(90deg, #4f46e5, #9333ea);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-bg {
-  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
-}
-
-/* ===========================
-   📦 Layout & Sections
-=========================== */
-
 .section-padding {
-  padding: 5rem 1rem;
+  padding: 4rem 0;
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 1.875rem;
   font-weight: 700;
+  color: #4338ca;
   text-align: center;
-  color: #1e3a8a;
+  margin-bottom: 1.5rem;
 }
 
 .divider {
-  width: 4rem;
+  width: 80px;
   height: 4px;
-  background-color: #4f46e5;
-  margin: 1rem auto 2rem;
+  background-color: #6366f1;
+  margin: 0 auto 3rem;
   border-radius: 9999px;
 }
-
-/* ===========================
-   💬 Navbar
-=========================== */
-
-.nav-link {
-  color: #374151;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: #4f46e5;
-}
-
-.btn-outline {
-  border: 2px solid #4f46e5;
-  color: #4f46e5;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  transition: all 0.3s ease;
-}
-
-.btn-outline:hover {
-  background-color: #4f46e5;
-  color: #fff;
-}
-
-/* ===========================
-   🧩 Cards & Components
-=========================== */
 
 .card {
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
-
-/* ===========================
-   🔘 Buttons
-=========================== */
-
-.btn-primary {
-  display: inline-block;
-  background-color: #4f46e5;
-  color: #ffffff;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: #3730a3;
-  transform: translateY(-2px);
-}
-
-/* ===========================
-   🏷️ Badges
-=========================== */
-
-.badge {
-  background-color: #e0e7ff;
-  color: #3730a3;
-  padding: 0.4rem 0.9rem;
-  border-radius: 9999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-/* ===========================
-   🦶 Footer
-=========================== */
-
-footer {
-  background-color: #1e3a8a;
-  color: #fff;
-  text-align: center;
-}
-
-footer p {
-  font-size: 0.9rem;
-  opacity: 0.9;
 }
