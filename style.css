@@ -1,189 +1,150 @@
-/* ============================================================
-   Compiled Custom Styles for Jun Pohy Portfolio (No Build Needed)
-   Classic Professional Theme: Navy Blue + Soft Gold + White
-   Works directly with <script src="https://cdn.tailwindcss.com"></script>
-   ============================================================ */
+/* ===========================
+   🎨 Global Base Styles
+=========================== */
 
-/* ✅ Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #f8f9fa; /* Clean off-white background */
-  color: #2d3748; /* Charcoal text */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #1f2937;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* ===========================
+   🌈 Color Utilities
+=========================== */
+
+.text-navy {
+  color: #1e3a8a; /* Indigo-900 */
+}
+
+.bg-navy {
+  background-color: #1e3a8a;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+}
+
+/* ===========================
+   📦 Layout & Sections
+=========================== */
+
+.section-padding {
+  padding: 5rem 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
   font-weight: 700;
-  color: #1e3c72; /* Navy Blue for headings */
+  text-align: center;
+  color: #1e3a8a;
 }
 
-a {
-  transition: color 0.2s;
-}
-
-/* ✅ Custom Buttons */
-.btn-primary {
-  background-color: #1e3c72; /* Navy Blue primary */
-  color: white;
-  padding: 0.75rem 1.5rem;
+.divider {
+  width: 4rem;
+  height: 4px;
+  background-color: #4f46e5;
+  margin: 1rem auto 2rem;
   border-radius: 9999px;
-  font-size: 1.125rem;
-  transition: all 0.2s;
 }
 
-.btn-primary:hover {
-  background-color: #2c5282; /* Lighter navy on hover */
-  box-shadow: 0 4px 6px rgba(30, 60, 114, 0.2);
+/* ===========================
+   💬 Navbar
+=========================== */
+
+.nav-link {
+  color: #374151;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #4f46e5;
 }
 
 .btn-outline {
-  border: 2px solid #1e3c72; /* Navy border */
-  color: #1e3c72;
-  padding: 0.75rem 1.5rem;
+  border: 2px solid #4f46e5;
+  color: #4f46e5;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
   border-radius: 9999px;
-  font-size: 1.125rem;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-  background-color: #1e3c72;
-  color: white;
+  background-color: #4f46e5;
+  color: #fff;
 }
 
-/* ✅ Section Headings */
-.section-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  text-align: center;
-  color: #1e3c72; /* Navy Blue */
-  margin-bottom: 3rem;
-}
+/* ===========================
+   🧩 Cards & Components
+=========================== */
 
-/* ✅ Cards (Projects & Experience) */
 .card {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: all 0.3s;
-  border-left: 4px solid #d4af37; /* Gold accent border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.15);
-  border-left-width: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-/* ✅ Navbar Links */
-.nav-link {
-  color: #2d3748; /* Charcoal */
-  font-weight: 500;
-  transition: color 0.2s;
-}
+/* ===========================
+   🔘 Buttons
+=========================== */
 
-.nav-link:hover {
-  color: #1e3c72; /* Navy Blue on hover */
-}
-
-/* ✅ Contact Info */
-.contact-info p a {
-  color: #1e3c72; /* Navy Blue links */
-  text-decoration: underline;
-}
-
-.contact-info p a:hover {
-  color: #d4af37; /* Gold on hover */
-}
-
-/* ✅ Gradient Backgrounds */
-.gradient-bg {
-  background: linear-gradient(to bottom, #e6f0ff, #ffffff); /* Soft blue to white */
-}
-
-.text-gradient {
-  background: linear-gradient(to right, #1e3c72, #d4af37); /* Navy to Gold gradient */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.section-padding {
-  padding: 5rem 1.5rem;
-}
-
-.divider {
-  width: 6rem;
-  height: 0.25rem;
-  background-color: #d4af37; /* Gold divider */
-  margin: 0 auto 2rem;
-  border-radius: 0.5rem;
-}
-
-/* ✅ Additional Accent Elements */
-.accent-gold {
-  color: #d4af37;
-}
-
-.bg-navy {
-  background-color: #1e3c72;
-}
-
-.bg-gold {
-  background-color: #d4af37;
-}
-
-.border-gold {
-  border-color: #d4af37;
-}
-
-.border-navy {
-  border-color: #1e3c72;
-}
-
-/* ✅ Badge/Tag Styles */
-.badge {
-  background-color: #1e3c72;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 600;
+.btn-primary {
   display: inline-block;
-  transition: all 0.2s;
-}
-
-.badge:hover {
-  background-color: #d4af37;
-  transform: scale(1.05);
-}
-
-/* ✅ Professional Highlights */
-.highlight-box {
-  background: linear-gradient(135deg, #1e3c72 0%, #2c5282 100%);
-  color: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.2);
-}
-
-.accent-line {
-  width: 4rem;
-  height: 0.25rem;
-  background-color: #d4af37;
-  margin: 1rem 0;
-}
-
-/* ✅ Footer Styles */
-footer {
-  background-color: #1e3c72;
-  color: white;
-}
-
-footer a {
-  color: #d4af37;
-}
-
-footer a:hover {
+  background-color: #4f46e5;
   color: #ffffff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #3730a3;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   🏷️ Badges
+=========================== */
+
+.badge {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ===========================
+   🦶 Footer
+=========================== */
+
+footer {
+  background-color: #1e3a8a;
+  color: #fff;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
