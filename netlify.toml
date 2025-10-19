@@ -2,12 +2,14 @@
   publish = "."
   command = ""
 
+# 🩵 This fixes the /admin redirect loop issue
 [[redirects]]
   from = "/admin"
-  to = "/admin/"
-  status = 301
+  to = "/admin/index.html"
+  status = 200
   force = true
 
+# 🩵 Keep this for SPA-style routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
