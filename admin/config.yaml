@@ -1,9 +1,9 @@
 backend:
   name: git-gateway
-  branch: main  # or "master" if that's your repo’s default branch
+  branch: main # or 'master' depending on your repo branch
 
-media_folder: "assets/images/uploads"
-public_folder: "/assets/images/uploads"
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
   - name: "blog"
@@ -14,5 +14,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
       - { label: "Body", name: "body", widget: "markdown" }
