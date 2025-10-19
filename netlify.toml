@@ -1,3 +1,7 @@
+[build]
+  publish = "portfolio"
+  command = ""
+
 [[redirects]]
   from = "/admin"
   to = "/admin/"
