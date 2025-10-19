@@ -3,168 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jun Pohy | Financial Analyst Portfolio</title>
-  <meta name="description" content="Portfolio of Jun Pohy — Financial Analyst specializing in M&A, investment banking, and financial modeling." />
+  <title>Jun Pohy | Portfolio</title>
+  <meta name="description" content="Jun Pohy is a Chartered Financial and Data Analyst specializing in M&A, investment banking, and financial modeling." />
 
-  <!-- ✅ Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
 
-  <!-- ✅ Custom Styles -->
-  <link href="styles.css" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <link href="style.css" rel="stylesheet" />
+
+  <link rel="icon" href="assets/images/favicon.png" />
 </head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
 
-<body class="bg-gray-50 text-gray-800 font-sans">
-
-  <!-- ========================== 🌐 Navbar ========================== -->
-  <header class="bg-indigo-950 text-white shadow-md fixed w-full z-10">
+  <!-- Navbar -->
+  <header class="bg-indigo-900 text-white fixed w-full z-10 shadow-md">
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
-      <a href="#home" class="text-xl font-bold tracking-wide text-white">Jun Pohy</a>
-      <nav class="space-x-8">
-        <a href="#home" class="hover:text-indigo-300">Home</a>
-        <a href="#about" class="hover:text-indigo-300">About</a>
-        <a href="#expertise" class="hover:text-indigo-300">Expertise</a>
-        <a href="#projects" class="hover:text-indigo-300">Projects</a>
-        <a href="#blog" class="hover:text-indigo-300">Blog</a>
-        <a href="#contact" class="hover:text-indigo-300">Contact</a>
+      <a href="#home" class="text-2xl font-bold tracking-wide">Jun Pohy</a>
+      <nav class="space-x-6 text-sm md:text-base">
+        <a href="#home" class="nav-link text-gray-100 hover:text-indigo-200">Home</a>
+        <a href="#about" class="nav-link text-gray-100 hover:text-indigo-200">About</a>
+        <a href="#expertise" class="nav-link text-gray-100 hover:text-indigo-200">Expertise</a>
+        <a href="#projects" class="nav-link text-gray-100 hover:text-indigo-200">Projects</a>
+        <a href="#contact" class="nav-link text-gray-100 hover:text-indigo-200">Contact</a>
       </nav>
     </div>
   </header>
 
-  <div class="pt-24"></div>
+  <!-- Hero Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-indigo-800 to-indigo-900 text-white text-center px-6">
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Chartered Financial Analyst</h1>
+    <p class="text-lg md:text-xl mb-6">M&A Advisory | Investment Banking | Financial Modeling</p>
 
-  <!-- ========================== 🏦 Hero Section ========================== -->
-  <section id="home" class="text-center py-24 bg-indigo-900 text-white">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm Jun Pohy</h1>
-    <p class="text-lg md:text-xl mb-6">Chartered Financial Analyst | Investment Banking | Financial Modeling</p>
-    <div class="flex justify-center flex-wrap gap-3">
-      <span class="bg-indigo-700 px-4 py-2 rounded-full">CFA Level 2</span>
-      <span class="bg-indigo-700 px-4 py-2 rounded-full">M&A Specialist</span>
-      <span class="bg-indigo-700 px-4 py-2 rounded-full">Financial Modeling Expert</span>
+    <div class="flex flex-wrap justify-center gap-3 mb-8">
+      <span class="bg-indigo-700 px-4 py-2 rounded-full text-sm">CFA Level 2</span>
+      <span class="bg-indigo-700 px-4 py-2 rounded-full text-sm">M&A Specialist</span>
+      <span class="bg-indigo-700 px-4 py-2 rounded-full text-sm">Financial Modeling Expert</span>
     </div>
+
+    <!-- Post Blog Button -->
+    <button onclick="openBlogForm()" class="btn-primary">+ Post New Blog</button>
   </section>
 
-  <!-- ========================== 👤 About Section ========================== -->
-  <section id="about" class="section-padding">
+  <!-- About Me -->
+  <section id="about" class="section-padding bg-white">
     <div class="container mx-auto px-6 md:px-12">
-      <div class="bg-white rounded-2xl shadow-md p-8">
-        <h2 class="text-3xl font-bold text-indigo-800 mb-4">About Me</h2>
-        <div class="md:flex md:items-center md:space-x-8">
-          <div class="md:w-1/3 mb-6 md:mb-0">
-            <img src="assets/images/profile.jpg" alt="Jun Pohy" class="rounded-full shadow-md w-64 h-64 mx-auto object-cover">
-          </div>
-          <div class="md:w-2/3 text-gray-700">
-            <p class="mb-4">
-              Hello! I'm <span class="font-semibold text-indigo-700">Jun Pohy</span>, a passionate Financial and Data Analyst with expertise in mergers & acquisitions, investment banking, and strategic valuation.
-              I enjoy turning complex data into insights that drive better business decisions.
-            </p>
-            <p>
-              My goal is to bridge finance and technology through analytical tools like Excel, Power BI, Python, and SQL to create meaningful business value.
-            </p>
-          </div>
+      <h2 class="section-title">About Me</h2>
+      <div class="md:flex md:items-center md:space-x-12">
+        <div class="md:w-1/3 flex justify-center mb-8 md:mb-0">
+          <img src="assets/images/profile.jpg" alt="Jun Pohy" class="rounded-full shadow-lg w-64 h-64 object-cover">
+        </div>
+
+        <div class="md:w-2/3 text-gray-700 leading-relaxed">
+          <p class="mb-6">
+            Hello! I'm <span class="font-semibold text-indigo-600">Jun Pohy</span>, a passionate Financial and Data Analyst with expertise in mergers & acquisitions, investment banking, and strategic valuation. I enjoy turning complex data into actionable insights that drive business decisions.
+          </p>
+          <p>
+            My goal is to bridge finance and technology through analytical tools like Excel, Power BI, Python, and SQL to create meaningful business value.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========================== 💼 Expertise / Skills Section ========================== -->
+  <!-- Core Expertise -->
   <section id="expertise" class="section-padding bg-gray-50">
     <div class="container mx-auto px-6 md:px-12">
-      <div class="bg-white rounded-2xl shadow-md p-8">
-        <h2 class="text-3xl font-bold text-indigo-800 mb-6 text-center">Core Expertise</h2>
+      <h2 class="section-title">Core Expertise</h2>
 
-        <div class="grid md:grid-cols-3 gap-6 mb-10">
-          <div class="border border-indigo-100 p-6 rounded-xl hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-2">Mergers & Acquisitions</h3>
-            <p class="text-gray-700 text-sm">
-              M&A advisory, deal structuring, valuation, and execution support for corporate transactions.
-            </p>
-          </div>
-
-          <div class="border border-indigo-100 p-6 rounded-xl hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-2">Investment Banking</h3>
-            <p class="text-gray-700 text-sm">
-              Experience in capital raising, advisory mandates, and client-focused deal analysis.
-            </p>
-          </div>
-
-          <div class="border border-indigo-100 p-6 rounded-xl hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-indigo-700 mb-2">Financial Modeling</h3>
-            <p class="text-gray-700 text-sm">
-              Building detailed valuation, merger, and forecasting models for strategic decision-making.
-            </p>
-          </div>
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="card">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Mergers & Acquisitions</h3>
+          <p>Advisory on deal structuring, valuation, and execution support for corporate transactions.</p>
         </div>
+        <div class="card">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Investment Banking</h3>
+          <p>Expertise in capital raising, transaction advisory, and client-focused deal analysis.</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">Financial Modeling</h3>
+          <p>Building detailed valuation, merger, and forecasting models for decision-making.</p>
+        </div>
+      </div>
 
-        <h3 class="text-2xl font-semibold text-indigo-700 mb-4 text-center">Technical Skills</h3>
+      <!-- Technical Skills -->
+      <div class="text-center mt-20">
+        <h3 class="text-2xl font-bold text-indigo-700 mb-6">Technical Skills</h3>
         <div class="flex flex-wrap justify-center gap-3">
-          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">Excel (Advanced)</span>
-          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">Power BI</span>
-          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">Python / Pandas</span>
-          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">SQL Databases</span>
-          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">DCF Valuation</span>
-          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full">LBO Modeling</span>
+          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm">Excel (Advanced)</span>
+          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm">Power BI</span>
+          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm">Python / Pandas</span>
+          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm">SQL Databases</span>
+          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm">DCF Valuation</span>
+          <span class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm">LBO Modeling</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========================== 📊 Projects Section ========================== -->
-  <section id="projects" class="section-padding">
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding bg-white mt-20">
     <div class="container mx-auto px-6 md:px-12">
-      <h2 class="text-3xl font-bold text-center text-indigo-800 mb-12">Projects</h2>
-      <div class="grid md:grid-cols-3 gap-8">
+      <h2 class="section-title">Projects</h2>
 
-        <!-- Project 1 -->
+      <div class="grid md:grid-cols-3 gap-8">
         <div class="card">
           <img src="assets/images/project1.jpg" alt="Financial Dashboard" class="rounded-lg mb-4">
           <h3 class="text-xl font-semibold mb-2">Financial Dashboard</h3>
-          <p class="text-gray-700 mb-4">
-            Power BI dashboard visualizing key financial metrics and business trends.
-          </p>
-          <a href="#" target="_blank" class="text-indigo-600 hover:underline">View Project →</a>
+          <p class="text-gray-700 mb-4">Power BI dashboard visualizing key financial metrics and business trends.</p>
+          <a href="#" class="text-indigo-600 hover:underline">View Project →</a>
         </div>
 
-        <!-- Project 2 -->
         <div class="card">
           <img src="assets/images/project2.jpg" alt="Python Automation" class="rounded-lg mb-4">
           <h3 class="text-xl font-semibold mb-2">Python Data Automation</h3>
-          <p class="text-gray-700 mb-4">
-            Automated financial reporting system using Python and Pandas.
-          </p>
-          <a href="#" target="_blank" class="text-indigo-600 hover:underline">View Project →</a>
+          <p class="text-gray-700 mb-4">Automated financial reporting process using Python (Pandas, openpyxl).</p>
+          <a href="#" class="text-indigo-600 hover:underline">View Project →</a>
         </div>
 
-        <!-- Project 3 -->
         <div class="card">
           <img src="assets/images/project3.jpg" alt="Market Insights" class="rounded-lg mb-4">
           <h3 class="text-xl font-semibold mb-2">Market Insights Report</h3>
-          <p class="text-gray-700 mb-4">
-            Comprehensive market analysis report using quantitative methods.
-          </p>
-          <a href="#" target="_blank" class="text-indigo-600 hover:underline">View Project →</a>
+          <p class="text-gray-700 mb-4">Comprehensive market analysis using quantitative methods.</p>
+          <a href="#" class="text-indigo-600 hover:underline">View Project →</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ========================== ✍️ Blog Section ========================== -->
-  <section id="blog" class="section-padding bg-gray-50">
+  <!-- Latest Blogs -->
+  <section id="blogs" class="section-padding bg-gray-50 mt-20">
     <div class="container mx-auto px-6 md:px-12 text-center">
-      <h2 class="text-3xl font-bold text-indigo-800 mb-6">Latest Blogs</h2>
-      <p class="text-gray-600 mb-8">Share your insights, market analyses, or finance tips here.</p>
+      <h2 class="section-title">Latest Blogs</h2>
+      <p class="text-gray-600 mb-10">Share your insights, market analyses, or finance tips here.</p>
+
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- TODO: Replace with dynamic blog content later -->
         <div class="card">
           <h3 class="text-xl font-semibold mb-2">The Power of Financial Modeling</h3>
           <p class="text-gray-700 mb-4">Understanding how financial models shape business strategy.</p>
           <a href="#" class="text-indigo-600 hover:underline">Read More →</a>
         </div>
+
         <div class="card">
           <h3 class="text-xl font-semibold mb-2">AI in Investment Banking</h3>
           <p class="text-gray-700 mb-4">Exploring how automation enhances data-driven financial insights.</p>
           <a href="#" class="text-indigo-600 hover:underline">Read More →</a>
         </div>
+
         <div class="card">
           <h3 class="text-xl font-semibold mb-2">Top 5 Valuation Methods in 2025</h3>
           <p class="text-gray-700 mb-4">A breakdown of key techniques every analyst should master.</p>
@@ -174,29 +159,25 @@
     </div>
   </section>
 
-  <!-- ========================== 📞 Contact Section ========================== -->
-  <section id="contact" class="bg-indigo-900 text-white py-20">
-    <div class="container mx-auto text-center px-6">
-      <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
-      <p class="max-w-2xl mx-auto text-indigo-200 mb-8">
-        Interested in collaborations, consulting, or career opportunities? Let’s talk!
-      </p>
-      <div class="contact-info">
-        <p>📧 <a href="mailto:junpohy@email.com" class="text-white hover:underline">junpohy@email.com</a></p>
-        <p>🔗 <a href="https://linkedin.com/in/junpohy" target="_blank" class="text-white hover:underline">LinkedIn Profile</a></p>
-        <p>🐙 <a href="https://github.com/junpohy" target="_blank" class="text-white hover:underline">GitHub Portfolio</a></p>
-      </div>
-    </div>
+  <!-- Contact -->
+  <section id="contact" class="section-padding bg-indigo-900 text-white text-center">
+    <h2 class="text-3xl font-bold mb-6">Let's Connect</h2>
+    <p class="mb-8 max-w-2xl mx-auto">
+      Open to discussing M&A opportunities, consulting engagements, and strategic financial advisory roles.
+    </p>
+    <a href="mailto:jun.pohy@example.com" class="btn-outline">Get in Touch</a>
   </section>
 
-  <!-- ========================== ⚙️ Footer ========================== -->
-  <footer class="bg-indigo-950 text-indigo-200 text-center py-6">
-    <p class="text-sm">
-      © <span id="year"></span> Jun Pohy. All rights reserved.
-    </p>
+  <!-- Footer -->
+  <footer class="bg-indigo-950 text-white text-center py-6">
+    <p class="text-sm">© <span id="year"></span> Jun Pohy. All rights reserved.</p>
   </footer>
 
+  <!-- Blog Form Placeholder -->
   <script>
+    function openBlogForm() {
+      alert("📝 Blog posting feature coming soon! Here you'll be able to add and manage your posts.");
+    }
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
