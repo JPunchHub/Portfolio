@@ -3,144 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CFA portfolio — M&A advisory, investment banking, and financial modeling expertise." />
-  <title>CFA Portfolio - M&A & Investment Banking</title>
-  <link rel="icon" href="assets/favicon.ico" />
+  <title><!-- TODO: Replace with your full name -->Jun Pohy | Portfolio</title>
+  <meta name="description" content="<!-- TODO: Add a short description of yourself -->Jun Pohy is a data analyst and problem solver." />
 
-  <!-- Styles -->
-  <style>
-    :root { --nav-height: 72px; --primary-1: #1e3c72; --primary-2: #2a5298; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #1a1a1a; background: #404b60; }
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
 
-    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
-    .skip-link:focus { left: 1rem; top: 1rem; background: #fff; color: #000; padding: 0.5rem 1rem; border-radius: 4px; z-index: 2000; }
+  <!-- TODO: Add your favicon (optional) -->
+  <link rel="icon" href="assets/images/favicon.png" />
 
-    nav { background: linear-gradient(135deg, var(--primary-1), var(--primary-2)); padding: 1.5rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); }
-    nav ul { list-style: none; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
-    nav a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; padding: 0.5rem 1rem; border-radius: 4px; }
-    nav a:hover, nav a:focus { background: rgba(255,255,255,0.12); transform: translateY(-2px); }
-
-    section, .container { scroll-margin-top: var(--nav-height); }
-    .hero { background: linear-gradient(135deg, var(--primary-1), var(--primary-2), #3d5a9e); color: white; padding: 6rem 2rem; text-align: center; position: relative; overflow: hidden; min-height: 320px; }
-    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('assets/hero-wave.svg'), url('assets/hero-bars.svg'); background-position: right center, left center; background-repeat: no-repeat; background-size: 50% auto, 30% auto; opacity: 0.12; pointer-events: none; }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; position: relative; }
-    .hero p { font-size: 1.3rem; opacity: 0.95; margin-bottom: 2rem; position: relative; }
-
-    .credentials { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
-    .credential-badge { background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); padding: 1rem 2rem; border-radius: 50px; border: 2px solid rgba(255, 255, 255, 0.3); font-weight: 600; transition: 0.3s; }
-    .credential-badge:hover { background: rgba(255, 255, 255, 0.25); transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); }
-
-    .container { max-width: 1200px; margin: auto; padding: 4rem 2rem; }
-    .section { background: white; padding: 3rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07); margin-bottom: 2rem; transition: 0.3s; }
-    .section:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); }
-
-    h2 { font-size: 2rem; color: var(--primary-1); border-bottom: 3px solid var(--primary-2); display: inline-block; margin-bottom: 1.5rem; padding-bottom: 0.75rem; position: relative; }
-    h2::before { content: ''; position: absolute; top: -40px; left: -20px; width: 400px; height: 60px; background-image: url('assets/h2-deco.svg'); background-repeat: no-repeat; opacity: 0.5; }
-
-    .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .expertise-card { background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 2rem; border-radius: 10px; border-left: 4px solid var(--primary-2); transition: 0.3s; }
-    .expertise-card:hover { border-left-width: 8px; transform: translateX(5px); background: linear-gradient(135deg, #e9ecef, #dee2e6); }
-    .expertise-card h3 { color: var(--primary-1); margin-bottom: 1rem; }
-
-    .skills-container { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
-    .skill-tag { background: var(--primary-2); color: white; padding: 0.6rem 1.2rem; border-radius: 25px; font-size: 0.95rem; font-weight: 500; transition: 0.3s; }
-    .skill-tag:hover { background: var(--primary-1); transform: scale(1.05); }
-
-    .cta-section { background: linear-gradient(135deg, var(--primary-1), var(--primary-2)); color: white; text-align: center; padding: 4rem 2rem; border-radius: 12px; position: relative; overflow: hidden; }
-    .cta-section::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background-image: url('assets/cta-deco.svg'); background-repeat: no-repeat; background-size: cover; opacity: 0.08; }
-    .cta-button { background: white; color: var(--primary-1); padding: 1rem 3rem; border-radius: 50px; text-decoration: none; font-weight: 600; margin-top: 2rem; display: inline-block; transition: 0.3s; }
-    .cta-button:hover { background: #f8f9fa; transform: translateY(-3px); box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); }
-
-    footer { background: #1a1a1a; color: #aaa; text-align: center; padding: 2rem; margin-top: 4rem; }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2rem; }
-      .hero p { font-size: 1.1rem; }
-      nav ul { gap: 1rem; }
-      .container { padding: 2rem 1rem; }
-      h2::before { display: none; }
-    }
-  </style>
+  <!-- NOTE: Google Tag Manager & Plausible removed. Add your own analytics if needed. -->
 </head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#expertise">Expertise</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <main id="main-content">
-    <div class="hero">
-      <h1>Chartered Financial Analyst</h1>
-      <p>M&A Advisory | Investment Banking | Financial Modeling</p>
-      <div class="credentials">
-        <div class="credential-badge">CFA Level 2</div>
-        <div class="credential-badge">M&A Specialist</div>
-        <div class="credential-badge">Financial Modeling Expert</div>
+  <!-- Navbar -->
+  <header class="bg-white shadow-md fixed w-full z-10">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <!-- TODO: Replace with your name or logo -->
+      <a href="#home" class="text-2xl font-bold text-indigo-600">Jun Pohy</a>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-indigo-600">About</a>
+        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#experience" class="hover:text-indigo-600">Experience</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Home Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-indigo-50 to-white pt-16">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-indigo-700 mb-4 text-center">
+      <!-- TODO: Replace with your name -->Hi, I’m Jun Pohy
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-700 mb-8 text-center">
+      <!-- TODO: Replace with your tagline or profession -->A Passionate Financial & Data Analyst
+    </p>
+    <a href="#projects" class="bg-indigo-600 text-white px-6 py-3 rounded-full text-lg hover:bg-indigo-700 transition">
+      View My Work
+    </a>
+  </section>
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">About Me</h2>
+      <div class="md:flex md:items-center md:space-x-12">
+        
+        <!-- Profile Image -->
+        <div class="md:w-1/3 flex justify-center mb-8 md:mb-0">
+          <!-- TODO: Replace the image path with your own photo -->
+          <img src="assets/images/profile.jpg" alt="Jun Pohy" class="rounded-full shadow-lg w-64 h-64 object-cover">
+        </div>
+
+        <!-- About Text -->
+        <div class="md:w-2/3 text-gray-700 leading-relaxed">
+          <!-- TODO: Replace this paragraph with your own introduction -->
+          <p class="mb-6">
+            Hello! I'm <span class="font-semibold text-indigo-600">Jun Pohy</span>, a passionate Financial and Data Analyst who enjoys exploring insights hidden within numbers. 
+            I specialize in data visualization, reporting, and using analytics to support decision-making.
+          </p>
+
+          <!-- TODO: Add or remove skills as needed -->
+          <h3 class="text-2xl font-semibold text-indigo-600 mb-3">Key Skills</h3>
+          <ul class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-gray-800">
+            <li>📊 Data Analysis</li>
+            <li>💡 Financial Modeling</li>
+            <li>📈 Excel / Power BI</li>
+            <li>🐍 Python / Pandas</li>
+            <li>📉 SQL / Databases</li>
+            <li>🧠 Problem Solving</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="container">
-      <section id="about" class="section">
-        <h2>Professional Profile</h2>
-        <p style="font-size: 1.1rem; color: #333;">
-          Seasoned finance professional with extensive experience in mergers and acquisitions, investment banking, and sophisticated financial modeling. CFA Level 2 accredited with a proven track record advising clients across buy-side and sell-side transactions, performing detailed valuation work, and supporting strategic capital decisions.
-        </p>
-      </section>
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">Projects</h2>
 
-      <section id="expertise" class="section">
-        <h2>Core Expertise</h2>
-        <div class="expertise-grid">
-          <div class="expertise-card">
-            <h3>Mergers & Acquisitions</h3>
-            <p>Comprehensive M&A advisory including deal origination, due diligence, valuation, negotiation, and transaction execution.</p>
-          </div>
-          <div class="expertise-card">
-            <h3>Investment Banking</h3>
-            <p>Capital raising, strategic advisory, and structured finance solutions across debt and equity markets.</p>
-          </div>
-          <div class="expertise-card">
-            <h3>Financial Modeling</h3>
-            <p>Expert in DCF models, LBO, merger models, sensitivity analysis, and scenario planning frameworks.</p>
-          </div>
+      <!-- TODO: Replace these example projects with your own -->
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Project 1 -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition p-6">
+          <img src="assets/images/project1.jpg" alt="Project 1" class="rounded-lg mb-4">
+          <h3 class="text-2xl font-semibold mb-2">Financial Dashboard</h3>
+          <p class="text-gray-700 mb-4">
+            <!-- TODO: Replace description -->
+            An interactive dashboard built in Power BI to visualize key financial metrics and trends.
+          </p>
+          <a href="<!-- TODO: Add your GitHub or live project link -->#" target="_blank" class="text-indigo-600 hover:underline">View Project →</a>
         </div>
-      </section>
 
-      <section id="skills" class="section">
-        <h2>Technical Skills</h2>
-        <div class="skills-container">
-          <span class="skill-tag">DCF Valuation</span>
-          <span class="skill-tag">LBO Modeling</span>
-          <span class="skill-tag">Merger Models</span>
-          <span class="skill-tag">Excel (Advanced)</span>
-          <span class="skill-tag">Financial Statement Analysis</span>
-          <span class="skill-tag">Due Diligence</span>
-          <span class="skill-tag">Pitch Book Creation</span>
-          <span class="skill-tag">Bloomberg Terminal</span>
-          <span class="skill-tag">FactSet</span>
-          <span class="skill-tag">Capital IQ</span>
+        <!-- Project 2 -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition p-6">
+          <img src="assets/images/project2.jpg" alt="Project 2" class="rounded-lg mb-4">
+          <h3 class="text-2xl font-semibold mb-2">Python Data Automation</h3>
+          <p class="text-gray-700 mb-4">
+            <!-- TODO: Replace description -->
+            Automated financial reporting process using Python (Pandas, openpyxl).
+          </p>
+          <a href="#" target="_blank" class="text-indigo-600 hover:underline">View Project →</a>
         </div>
-      </section>
 
-      <section id="contact" class="cta-section">
-        <h2>Let's Connect</h2>
-        <p>Open to discussing M&A opportunities, consulting engagements, and strategic financial advisory roles.</p>
-        <a href="mailto:mdas@gmail.com" class="cta-button">Get In Touch</a>
-      </section>
+        <!-- Project 3 -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition p-6">
+          <img src="assets/images/project3.jpg" alt="Project 3" class="rounded-lg mb-4">
+          <h3 class="text-2xl font-semibold mb-2">Market Insights Report</h3>
+          <p class="text-gray-700 mb-4">
+            <!-- TODO: Replace description -->
+            A financial research project analyzing market performance and trends using statistical methods.
+          </p>
+          <a href="#" target="_blank" class="text-indigo-600 hover:underline">View Project →</a>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 bg-white">
+    <div class="container mx-auto px-6 md:px-12">
+      <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">Experience</h2>
 
-  <footer>
-    <p>&copy; <span id="year">2025</span> Chartered Financial Analyst Portfolio. All rights reserved.</p>
+      <!-- TODO: Replace with your real work experience -->
+      <div class="space-y-8">
+
+        <!-- Experience Item 1 -->
+        <div class="border-l-4 border-indigo-600 pl-6">
+          <h3 class="text-2xl font-semibold text-gray-800">Financial Analyst</h3>
+          <p class="text-indigo-600 font-medium mb-1">ABC Corp | 2022 – Present</p>
+          <p class="text-gray-700">
+            <!-- TODO: Add your responsibilities -->
+            Conducted financial analysis, prepared monthly reports, and supported strategic business planning.
+          </p>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="border-l-4 border-indigo-600 pl-6">
+          <h3 class="text-2xl font-semibold text-gray-800">Data Analyst Intern</h3>
+          <p class="text-indigo-600 font-medium mb-1">XYZ Analytics | 2021 – 2022</p>
+          <p class="text-gray-700">
+            <!-- TODO: Add your responsibilities -->
+            Created data dashboards and automated reports using Python and Power BI.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div class="border-l-4 border-indigo-600 pl-6">
+          <h3 class="text-2xl font-semibold text-gray-800">Education</h3>
+          <p class="text-indigo-600 font-medium mb-1">
+            <!-- TODO: Add your degree and school -->
+            B.S. in Finance & Analytics, University of Example (2018 – 2022)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 md:px-12 text-center">
+      <h2 class="text-4xl font-bold text-indigo-700 mb-8">Get In Touch</h2>
+
+      <p class="text-gray-700 mb-8 max-w-2xl mx-auto">
+        <!-- TODO: Write your own contact invitation -->
+        Interested in collaborating or have a project in mind? Let’s connect!
+      </p>
+
+      <!-- TODO: Replace with your own contact info -->
+      <div class="space-y-4 text-lg">
+        <p>📧 Email: <a href="mailto:jun.pohy@example.com" class="text-indigo-600 hover:underline">jun.pohy@example.com</a></p>
+        <p>🔗 LinkedIn: <a href="https://linkedin.com/in/junpohy" class="text-indigo-600 hover:underline">linkedin.com/in/junpohy</a></p>
+        <p>🐙 GitHub: <a href="https://github.com/junpohy" class="text-indigo-600 hover:underline">github.com/junpohy</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-700 text-white text-center py-6 mt-20">
+    <p class="text-sm">
+      © <span id="year"></span> <!-- TODO: Replace with your name -->Jun Pohy. All rights reserved.
+    </p>
   </footer>
 
+  <!-- Simple JS: Auto-update footer year -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
