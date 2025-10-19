@@ -1,19 +1,20 @@
 /* ============================================================
    Compiled Custom Styles for Jun Pohy Portfolio (No Build Needed)
+   Classic Professional Theme: Navy Blue + Soft Gold + White
    Works directly with <script src="https://cdn.tailwindcss.com"></script>
    ============================================================ */
 
 /* ✅ Global Styles */
 body {
-  background-color: #404b60; /* Tailwind bg-gray-50 */
-  color: #1f2937; /* text-gray-800 */
+  background-color: #f8f9fa; /* Clean off-white background */
+  color: #2d3748; /* Charcoal text */
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  color: #111827; /* text-gray-900 */
+  color: #1e3c72; /* Navy Blue for headings */
 }
 
 a {
@@ -22,28 +23,30 @@ a {
 
 /* ✅ Custom Buttons */
 .btn-primary {
-  background-color: #4f46e5; /* indigo-600 */
+  background-color: #1e3c72; /* Navy Blue primary */
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   font-size: 1.125rem;
   transition: all 0.2s;
 }
+
 .btn-primary:hover {
-  background-color: #4338ca; /* indigo-700 */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #2c5282; /* Lighter navy on hover */
+  box-shadow: 0 4px 6px rgba(30, 60, 114, 0.2);
 }
 
 .btn-outline {
-  border: 2px solid #4f46e5;
-  color: #4f46e5;
+  border: 2px solid #1e3c72; /* Navy border */
+  color: #1e3c72;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   font-size: 1.125rem;
   transition: all 0.2s;
 }
+
 .btn-outline:hover {
-  background-color: #4f46e5;
+  background-color: #1e3c72;
   color: white;
 }
 
@@ -52,7 +55,7 @@ a {
   font-size: 2.25rem;
   font-weight: 700;
   text-align: center;
-  color: #4338ca;
+  color: #1e3c72; /* Navy Blue */
   margin-bottom: 3rem;
 }
 
@@ -63,36 +66,45 @@ a {
   padding: 1.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   transition: all 0.3s;
+  border-left: 4px solid #d4af37; /* Gold accent border */
 }
+
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.15);
+  border-left-width: 6px;
 }
 
 /* ✅ Navbar Links */
 .nav-link {
-  color: #374151;
+  color: #2d3748; /* Charcoal */
   font-weight: 500;
   transition: color 0.2s;
 }
+
 .nav-link:hover {
-  color: #4f46e5;
+  color: #1e3c72; /* Navy Blue on hover */
 }
 
 /* ✅ Contact Info */
 .contact-info p a {
-  color: #4f46e5;
+  color: #1e3c72; /* Navy Blue links */
   text-decoration: underline;
+}
+
+.contact-info p a:hover {
+  color: #d4af37; /* Gold on hover */
 }
 
 /* ✅ Gradient Backgrounds */
 .gradient-bg {
-  background: linear-gradient(to bottom, #eef2ff, #ffffff);
+  background: linear-gradient(to bottom, #e6f0ff, #ffffff); /* Soft blue to white */
 }
 
 .text-gradient {
-  background: linear-gradient(to right, #4f46e5, #a855f7);
+  background: linear-gradient(to right, #1e3c72, #d4af37); /* Navy to Gold gradient */
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -103,8 +115,75 @@ a {
 .divider {
   width: 6rem;
   height: 0.25rem;
-  background-color: #4f46e5;
+  background-color: #d4af37; /* Gold divider */
   margin: 0 auto 2rem;
   border-radius: 0.5rem;
 }
 
+/* ✅ Additional Accent Elements */
+.accent-gold {
+  color: #d4af37;
+}
+
+.bg-navy {
+  background-color: #1e3c72;
+}
+
+.bg-gold {
+  background-color: #d4af37;
+}
+
+.border-gold {
+  border-color: #d4af37;
+}
+
+.border-navy {
+  border-color: #1e3c72;
+}
+
+/* ✅ Badge/Tag Styles */
+.badge {
+  background-color: #1e3c72;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.2s;
+}
+
+.badge:hover {
+  background-color: #d4af37;
+  transform: scale(1.05);
+}
+
+/* ✅ Professional Highlights */
+.highlight-box {
+  background: linear-gradient(135deg, #1e3c72 0%, #2c5282 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.2);
+}
+
+.accent-line {
+  width: 4rem;
+  height: 0.25rem;
+  background-color: #d4af37;
+  margin: 1rem 0;
+}
+
+/* ✅ Footer Styles */
+footer {
+  background-color: #1e3c72;
+  color: white;
+}
+
+footer a {
+  color: #d4af37;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
